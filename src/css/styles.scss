@@ -1,0 +1,40 @@
+.calender-widget {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  li {
+    list-style: none;
+    text-align: center;
+    cursor: pointer;
+    padding: 5px;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    .arrowHeads {
+      > span {
+        cursor: pointer;
+      }
+      .left {
+        padding-right: 15px;
+      }
+    }
+  }
+  .calender-content {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding-top: 20px;
+    .weekdays {
+      display: contents;
+    }
+    .dates {
+      display: contents;
+      li {
+        &.current-date {
+          background-color: greenyellow;
+        }
+      }
+    }
+  }
+}
